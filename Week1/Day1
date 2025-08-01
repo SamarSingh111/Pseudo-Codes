@@ -1,4 +1,4 @@
-#Pseudo Code
+#Pseudo Code (leet code 32)
 
 i = n - 2
 while i >= 0 and nums[i] >= nums[i + 1]:
@@ -9,4 +9,36 @@ if i >= 0:
         j -= 1
     swap(nums[i], nums[j])
 reverse(nums, i + 1, n - 1)
+
+#(leet Code 2428)
+
+function maxHourglassSum(grid)
+    m = number of rows in grid
+    n = number of columns in grid
+    maxSum = negative infinity
+
+    for i from 0 to m - 3
+        for j from 0 to n - 3
+            top = grid[i][j] + grid[i][j+1] + grid[i][j+2]
+            middle = grid[i+1][j+1]
+            bottom = grid[i+2][j] + grid[i+2][j+1] + grid[i+2][j+2]
+            hourglassSum = top + middle + bottom
+            if hourglassSum > maxSum
+                maxSum = hourglassSum
+
+    return maxSum
+
+#(leet code 905)
+
+function sortArrayByParity(nums)
+    even = empty list
+    odd = empty list
+    for num in nums
+        if num mod 2 == 0
+            append num to even
+        else
+            append num to odd
+    return concatenate even and odd
+
+
 
