@@ -10,7 +10,7 @@ if i >= 0:
     swap(nums[i], nums[j])
 reverse(nums, i + 1, n - 1)
 
-#(leet Code 2428)
+#Pseudo Code (leet Code 2428)
 
 function maxHourglassSum(grid)
     m = number of rows in grid
@@ -28,7 +28,7 @@ function maxHourglassSum(grid)
 
     return maxSum
 
-#(leet code 905)
+#Pseudo Code (leet code 905)
 
 function sortArrayByParity(nums)
     even = empty list
