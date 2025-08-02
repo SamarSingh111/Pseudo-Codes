@@ -1,2 +1,32 @@
 # Pseudo Code (leet code 27)
 
+function removeElement(nums, val)
+    i ← 0
+    for j from 0 to length of nums - 1
+        if nums[j] ≠ val
+            nums[i] ← nums[j]
+            i ← i + 1
+    return i
+
+# Pseudo Code (leet code 217)
+function containsDuplicate(nums)
+    seen ← empty set
+    for num in nums
+        if num in seen
+            return true
+        add num to seen
+    return false
+
+# Pseudo Code (leet code 1207)
+
+function uniqueOccurrences(arr)
+    freqMap ← empty map
+    for num in arr
+        freqMap[num] ← freqMap.get(num, 0) + 1
+    freqSet ← empty set
+    for count in freqMap.values
+        if count in freqSet
+            return false
+        add count to freqSet
+    return true
+
