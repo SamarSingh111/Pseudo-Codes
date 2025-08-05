@@ -1,0 +1,24 @@
+#Pseudo Code (leet code 205)
+
+function isIsomorphic(s, t)
+    if length(s) ≠ length(t)
+        return false
+
+    map_s_to_t ← empty dictionary
+    map_t_to_s ← empty dictionary
+
+    for i from 0 to length(s) - 1
+        char_s ← s[i]
+        char_t ← t[i]
+
+        if char_s in map_s_to_t and map_s_to_t[char_s] ≠ char_t
+            return false
+
+        if char_t in map_t_to_s and map_t_to_s[char_t] ≠ char_s
+            return false
+
+        map_s_to_t[char_s] ← char_t
+        map_t_to_s[char_t] ← char_s
+
+    return true
+
